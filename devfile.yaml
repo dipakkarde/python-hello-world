@@ -5,6 +5,9 @@ components:
   - name: python
     container:
       image: registry.redhat.io/devspaces/udi-rhel8:3.15
+  - name: GitLab Workflow
+    plugin : 
+     id : GitLab.gitlab-workflow 
       volumeMounts:
         - name: venv
           path: /home/user/.venv
@@ -16,9 +19,6 @@ components:
   - name: venv
     volume:
       size: 1G
-  - name: GitLab Workflow
-    plugin : 
-     id : GitLab.gitlab-workflow 
 commands:
   - id: run
     exec:
