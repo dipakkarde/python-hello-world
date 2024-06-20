@@ -2,12 +2,12 @@ schemaVersion: 2.2.2
 metadata:
   name: python-hello-world
 components:
-  - name: python
-    container:
-      image: registry.redhat.io/devspaces/udi-rhel8:3.15
   - name: GitLab Workflow
     plugin : 
      id : GitLab.gitlab-workflow 
+  - name: python
+    container:
+      image: registry.redhat.io/devspaces/udi-rhel8:3.15
       volumeMounts:
         - name: venv
           path: /home/user/.venv
